@@ -1,5 +1,19 @@
 <h1>Books#indexページ</h1>
+<table>
+      <tr>
+            <th>Title</th>
+            <th>Body</th>
+
+      </tr>
       <% @books.each do |book| %>
-      <p><%=book.title %></p>
-      <% end %>
+      <tr>
+            <td><%=book.title %></td>
+            <td><%=book.body %></td>
+
+            <td>Edit</td>
+            <td>Destroy</td>
+      </tr>
+            <% end %>
+</table>
+
 <p>サンプル</p>
