@@ -1,12 +1,13 @@
 <h1>Editing Book</h1>
-<% if @book.errors.any? %>
+<p class="text"><% if @book.errors.any? %>
   <%= @book.errors.count %>error prohibited this book from saved:
   <% @book.errors.full_messages.each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
-<%= form_with model:@book, local:true do |f| %>
+</p>
 
+<%= form_with model:@book, local:true do |f| %>
 
   <p class="text">Title</p>
   <%= f.text_field :title %>
@@ -22,6 +23,6 @@
 <% end %>
 
 <p class="text">
-<%= link_to "show", book_path(@book) %>
+<%= link_to "Show", book_path(@book) %>
  | <a href="../">Back</a>
  </p>
